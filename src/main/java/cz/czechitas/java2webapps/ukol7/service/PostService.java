@@ -24,10 +24,10 @@ public class PostService {
 
     public Page<Post> list(LocalDate published, Pageable pageable) {
         PageRequest pageRequest= PageRequest.of(0, 20);
-        return postRepository.orderByPublicationDate(published, pageRequest);
+        return postRepository.findByPublishedBeforeOrderByPublishedDesc(published, pageRequest);
     }
 
-    public List<Post> singlePost(String slug) {
+    public List <Post> singlePost(String slug) {
         return postRepository.findBySlug(slug);
     }
 

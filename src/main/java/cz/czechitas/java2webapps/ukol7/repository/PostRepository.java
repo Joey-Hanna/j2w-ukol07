@@ -13,7 +13,7 @@ import java.util.List;
 @Repository
 public interface PostRepository extends JpaRepository<Post, Long> {
 
-    Page<Post> orderByPublicationDate(LocalDate published, PageRequest pageRequest);
+    Page<Post> findByPublishedBeforeOrderByPublishedDesc(LocalDate published, PageRequest pageRequest);
 
     List<Post> findBySlug(String slug);
 

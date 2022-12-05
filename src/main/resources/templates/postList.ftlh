@@ -1,8 +1,8 @@
 [#ftl]
 [@c.page title="Seznam všech postů"]
     <h1>Seznam všech postů</h1>
-
-    [#list posts.content]
+    [#list posts.content as singlePost]
+    <a href="/detail/${singlePost.slug?no_esc!''}">?
         <table class="u-full-width">
             <thead>
             <tr>
@@ -14,20 +14,22 @@
             </tr>
             </thead>
             <tbody>
-            [#items as singlePost]
-                <tr>
-                    <td>${singlePost.author?no_esc}</td>
-                    <td>${singlePost.title?no_esc}</td>
-                    <td>${singlePost.perex?no_esc}</td>
-                    <td>${singlePost.body?no_esc}</td>
-                    <td>${singlePost.published?date?string?no_esc}</td>
-                </tr>
-            [/#items]
+
+            <tr>
+                <td>${singlePost.author?no_esc!''}</td>
+                <td>${singlePost.title?no_esc!''}</td>
+                <td>${singlePost.perex?no_esc!''}</td>
+                <td>${singlePost.body?no_esc!''}</td>
+                <td>${singlePost.published?date?string?no_esc!''}</td>
+            </tr>
             </tbody>
         </table>
     [#else]
         <div>Seznam je prázdný.</div>
+
+        </a>
     [/#list]
+
 
     <div class="totalCount">Celkem nalezeno ${posts.totalElements} postů.</div>
 
