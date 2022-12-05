@@ -27,7 +27,7 @@ public class PostService {
         return postRepository.orderByPublicationDate(published, pageRequest);
     }
 
-    public String singlePost(String slug) {
+    public List<Post> singlePost(String slug) {
         return postRepository.findBySlug(slug);
     }
 
