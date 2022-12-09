@@ -24,7 +24,9 @@ public class PostService {
 
     public Page<Post> list(LocalDate published, Pageable pageable) {
         PageRequest pageRequest= PageRequest.of(0, 20);
-        return postRepository.findByPublishedBeforeOrderByPublishedDesc(published, pageRequest);
+        LocalDate date = LocalDate.now();
+        LocalDate tomorrow = date.plusDays(2);
+        return postRepository.findByPublishedBeforeOrderByPublishedDesc(tomorrow, pageRequest);
     }
 
     public List <Post> singlePost(String slug) {

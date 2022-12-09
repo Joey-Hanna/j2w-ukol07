@@ -17,7 +17,7 @@
                 <td>${singlePost.title?no_esc!''}</td>
                 <td>${singlePost.perex?no_esc!''}</td>
                 <td>${singlePost.body?no_esc!''}</td>
-                <td>${singlePost.published?date?string?no_esc!''}</td>
+                <td>${singlePost.published?date?string}</td>
             </tr>
         </tbody>
     </table>

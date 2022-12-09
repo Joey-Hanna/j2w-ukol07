@@ -2,7 +2,7 @@
 [@c.page title="Seznam všech postů"]
     <h1>Seznam všech postů</h1>
     [#list posts.content as singlePost]
-    <a href="/detail/${singlePost.slug?no_esc!''}">?
+    <a href="/detail/${singlePost.slug}">?
         <table class="u-full-width">
             <thead>
             <tr>
@@ -20,13 +20,12 @@
                 <td>${singlePost.title?no_esc!''}</td>
                 <td>${singlePost.perex?no_esc!''}</td>
                 <td>${singlePost.body?no_esc!''}</td>
-                <td>${singlePost.published?date?string?no_esc!''}</td>
+                <td>${singlePost.published?date?string}</td>
             </tr>
             </tbody>
         </table>
     [#else]
         <div>Seznam je prázdný.</div>
-
         </a>
     [/#list]
 
