@@ -16,7 +16,7 @@ public interface PostRepository extends JpaRepository<Post, Long> {
 
     Page<Post> findByPublishedBeforeOrderByPublishedDesc(LocalDate published, PageRequest pageRequest);
 
-    List<Post> findBySlug(String slug);
+    Post findBySlug(String slug);
 
 
 }

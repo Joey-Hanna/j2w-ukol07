@@ -30,7 +30,7 @@ public class PostService {
         return postRepository.findByPublishedBeforeOrderByPublishedDesc(tomorrow, pageRequest);
     }
 
-    public List<Post> singlePost(String slug) {
+    public Post singlePost(String slug) {
         return postRepository.findBySlug(slug);
     }
 
