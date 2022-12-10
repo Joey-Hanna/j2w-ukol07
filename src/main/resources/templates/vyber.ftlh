@@ -13,15 +13,4 @@
         </div>
     </form>
 
-    <h4>Zobrazit jeden post</h4>
-    <form action="/post/" method="get">
-        <div class="row">
-            <div class="ten columns">Jeden kompletní post
-            </div>
-            <div class="two columns submit">
-                <button class="button-primary" type="submit">Zobrazit</button>
-            </div>
-        </div>
-    </form>
-
 [/@c.page]

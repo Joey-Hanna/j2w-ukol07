@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PostService {
@@ -29,7 +30,7 @@ public class PostService {
         return postRepository.findByPublishedBeforeOrderByPublishedDesc(tomorrow, pageRequest);
     }
 
-    public List <Post> singlePost(String slug) {
+    public List<Post> singlePost(String slug) {
         return postRepository.findBySlug(slug);
     }
 

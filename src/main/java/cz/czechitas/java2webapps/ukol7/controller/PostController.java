@@ -32,11 +32,12 @@ public class PostController {
     }
 
 
-    @GetMapping("/post/{slug}")
+    @GetMapping("/detail/{slug}")
     public ModelAndView jedenPost(@PathVariable String slug) {
         return new ModelAndView("postDetails")
                 .addObject("singlePost", postService.singlePost(slug));
     }
+
 
     @GetMapping("/vyber")
     public String vyber() {
