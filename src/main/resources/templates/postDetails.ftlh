@@ -25,7 +25,7 @@
             </table>
         </div>
     </div>
-    [@c.pager /]
+
     [@c.controls /]
 
 [/@c.page]

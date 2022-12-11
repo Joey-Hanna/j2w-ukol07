@@ -1,6 +1,6 @@
 package cz.czechitas.java2webapps.ukol7.controller;
 
-import cz.czechitas.java2webapps.ukol7.entity.Post;
+
 import cz.czechitas.java2webapps.ukol7.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.util.UriComponentsBuilder;
 import org.springframework.web.util.UrlPathHelper;
-
 import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDate;
 
