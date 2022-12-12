@@ -24,7 +24,7 @@ public class PostService {
     public Page<Post> list(LocalDate published, Pageable pageable) {
         PageRequest pageRequest= PageRequest.of(0, 20);
         LocalDate date = LocalDate.now();
-        LocalDate tomorrow = date.plusDays(2);
+        LocalDate tomorrow = date.plusDays(1);
         return postRepository.findByPublishedBeforeOrderByPublishedDesc(tomorrow, pageRequest);
     }
 
